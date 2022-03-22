@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/kdwz?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF8
+    #url: jdbc:mysql://121.36.142.253:3306/kdwz?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF8
+    username: root
+    password: Gfj123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+swagger:
+  enabled: true
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+    include-message: always
